@@ -5,8 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout your source code from version control
-               git branch: 'main', url: 'https://github.com/rashmi2203/Handwritingrec.git'
-            }
+                git branch: 'main', url: 'https://github.com/rashmi2203/Handwritingrec.git'
             }
         }
 

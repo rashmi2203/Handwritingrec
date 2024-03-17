@@ -23,6 +23,9 @@ pipeline {
     }
 
     post {
-        // Post-build actions
+        success {
+            // Archive Docker image as an artifact
+            archiveArtifacts(artifacts: '*.tar.gz', allowEmptyArchive: true)
+        }
     }
 }

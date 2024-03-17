@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Build Docker image
                 script {
-                    docker.build("hello-world")
+                    docker.build("handwri")
                 }
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 // Run tests if applicable
                 script {
-                    docker.image("hello-world").run("-p 5000:5000 --name flaskapp-test -e ENVIRONMENT=test").stop()
+                    docker.image("handwri").run("-p 5000:5000 --name flaskapp-test -e ENVIRONMENT=test").stop()
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 // Deploy Docker container
                 script {
-                    docker.image("hello-world").run("-p 5000:5000 --name flaskapp -d")
+                    docker.image("handwri").run("-p 5000:5000 --name flaskapp -d")
                 }
             }
         }

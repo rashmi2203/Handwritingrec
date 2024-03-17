@@ -22,7 +22,7 @@ pipeline {
             steps {
                 // Run tests if applicable
                 script {
-                    docker.image("your_docker_image_name").run("-p 5000:5000 --name flaskapp-test -e ENVIRONMENT=test").stop()
+                    docker.image("hello-world").run("-p 5000:5000 --name flaskapp-test -e ENVIRONMENT=test").stop()
                 }
             }
         }
